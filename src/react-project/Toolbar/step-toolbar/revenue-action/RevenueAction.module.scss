@@ -1,0 +1,292 @@
+@import '~react-project/styles/variables';
+
+.Setup {
+  background-color: #fff;
+  border-radius: 4px;
+  width: 600px;
+  box-shadow: 0 2px 4px rgba(26, 42, 74, 0.03), 0 4px 15px rgba(32, 51, 89, 0.1);
+}
+
+.Title {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  color: $subtitle-grey;
+  padding: 20px;
+  margin: 0;
+  border-bottom: 1px solid $top-bar-separator-color;
+}
+
+.SetupContent {
+  margin: 10px;
+  background: $brand-grey-5;
+  padding: 14px 18px;
+  border-radius: 4px;
+}
+
+.SetupDescription {
+  font-size: 16px;
+  text-align: center;
+  color: $grey-light-1;
+  line-height: 24px;
+  padding: 0 20px;
+}
+
+.SetupInstructions {
+  font-size: 13px;
+  font-style: italic;
+  line-height: 15px;
+  margin: 20px 0;
+}
+
+.SetupInstructionsLink {
+  color: $brand-blue;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  &:hover {
+    color: $funnelytics-hover-blue;
+  }
+}
+
+.SetupInstructionsLinkIcon {
+  vertical-align: middle;
+  padding-left: 6px;
+}
+
+.ApiKey {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid $brand-grey-4;
+  margin-top: 20px;
+}
+
+.ApiKeyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  color: $subtitle-grey;
+  margin-bottom: 20px;
+}
+
+.ApiKeyTextarea {
+  font-size: 14px;
+  color: $grey-font-1;
+  word-break: break-all;
+  resize: none;
+  outline: none;
+  border: none;
+  text-align: center;
+  width: 100%;
+}
+
+.CopyApiKeyToClipboardButton {
+  color: $brand-blue;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  &:hover {
+    color: $funnelytics-hover-blue;
+  }
+}
+
+.SettingsContent {
+  padding: 10px 20px 20px 20px;
+  color: $subtitle-grey;
+  font-size: 12px;
+}
+
+.SettingsDescription {
+  color: $subtitle-grey;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0 20px;
+}
+
+.AttributesOperator,
+.ConditionDropdownTrigger {
+  background-color: $brand-grey-5;
+  color: $grey-light-1;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.AttributesDropdown {
+  margin: 0 8px;
+}
+
+.ConditionDropdownTrigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ConditionDropdownTriggerValue {
+  width: 96px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.TriggerIcon {
+  display: inline-block;
+  &.TriggerIconOpened {
+    transform: rotate(180deg);
+  }
+  svg {
+    width: 12px;
+    height: 8px;
+  }
+}
+
+.DropdownContent {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background: $white;
+  overflow: hidden;
+}
+
+.Attribute {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.RemoveConditionButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 4px;
+  background-color: $brand-grey-5;
+  color: $grey-font-1;
+  cursor: pointer;
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.AddConditionButton {
+  min-width: 122px;
+}
+
+.Metrics {
+  margin-top: 16px;
+}
+
+.MetricsDropdownTrigger {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  border: 1px solid $top-bar-separator-color;
+  border-radius: 4px;
+  cursor: pointer;
+  color: $grey-font-1;
+}
+
+.MetricsDropdownTriggerText {
+  padding: 8px 32px 8px 10px;
+  color: $grey-light-1;
+}
+
+.MetricsDropdownTriggerLayersIcon {
+  display: flex;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.MetricsDropdownContent {
+  width: 245px;
+}
+
+.MetricsDropdownContentTitle {
+  font-size: 13px;
+  color: $subtitle-grey;
+  margin: 0;
+  border-bottom: 1px solid $top-bar-separator-color;
+  padding: 12px 16px;
+  font-weight: normal;
+}
+
+.MetricsDropdownContentHint {
+  color: $grey-font-1;
+  padding: 0 16px;
+}
+
+.MetricItem {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  &:nth-child(odd) {
+    background: $background-grey;
+  }
+}
+
+.MetricItemName {
+  padding-left: 8px;
+}
+
+.SearchProperty {
+  padding: 8px 12px;
+  border-bottom: 1px solid $top-bar-separator-color;
+}
+
+.DropdownList {
+  max-height: 236px;
+  overflow-y: auto;
+}
+
+.PropertyDropdownContent {
+  width: 245px;
+}
+
+.PropertiesListDisclosureButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 12px;
+  background: transparent;
+  margin: 0;
+}
+
+.PropertiesListDisclosureButtonText {
+  font-weight: bold;
+  padding-left: 8px;
+}
+
+.DropdownListItem {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $grey-font-1;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.CustomPropertyValue {
+  padding: 8px 12px;
+  border-bottom: 1px solid $top-bar-separator-color;
+}
+
+.PropertiesLoading {
+  padding: 1rem;
+}

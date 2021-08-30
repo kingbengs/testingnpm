@@ -1,0 +1,186 @@
+@import "~react-project/styles/variables";
+
+.Wrapper {
+  pointer-events: all;
+  border-right: 1px solid #D6DEE6;
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+
+.Item {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  width: 47px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  &:hover{
+    fill: #009BF3;
+    background: $hover-color;
+  }
+}
+
+.Selected {
+  fill: #009BF3;
+  background: $hover-color;
+}
+
+.Arrow {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  cursor: pointer;
+  svg {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.ArrowRotated {
+  transform: rotate(90deg);
+}
+
+.ExtendedWrapp {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #D8DDE5;
+  border-radius: 6px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 47px;
+  right: 0;
+  width: 180px;
+  flex-direction: column;
+
+  li {
+    cursor: grab;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #4A5468;
+    font-size: 12px;
+
+    &:hover{
+      background-color: $hover-color;
+    }
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+    &:last-child {
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  }
+}
+
+.Active {
+  &.CIRCLE, &.SQUARE, &.SELECT, &.PAN {
+    .Icon {
+      & > svg {
+        rect {
+          stroke: #009BF3;
+        }
+        path {
+          fill: #009BF3;
+        }
+      }
+    }
+  }
+  &.TRIANGLE {
+    .Icon {
+      & > svg {
+        path {
+          stroke: #009BF3;
+        }
+      }
+    }
+  }
+  &.TEXT, &.PLUS{
+    svg {
+      rect {
+        stroke: #009BF3;
+      }
+      path {
+        fill: #009BF3;
+      }
+    }
+  }
+}
+
+.Extended {
+  cursor: pointer;
+}
+
+.ActiveIcon {
+  div {
+    color: #009BF3;
+  }
+  svg {
+    rect {
+      stroke: #009BF3;
+    }
+    path {
+      fill: #009BF3;
+    }
+  }
+  .Triangle {
+    path {
+      stroke: #009BF3;
+      fill: none;
+    }
+  }
+}
+
+.Icon {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.IconWithTrigger {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.DropdownTrigger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.TopToolbarDropdown {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.TriggerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

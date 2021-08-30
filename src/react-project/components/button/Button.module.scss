@@ -1,0 +1,34 @@
+@import '~react-project/styles/variables';
+
+.BrandBlue,
+.ReverseBrandBlue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  padding: 0 15px;
+  border-radius: 4px;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.BrandBlue {
+  background: $brand-blue;
+  cursor: pointer;
+  color: #ffffff;
+  border-style: none;
+  height: 32px;
+}
+
+.ReverseBrandBlue {
+  background: #ffffff;
+  cursor: pointer;
+  color: $brand-blue;
+  border: 1px solid $brand-blue;
+  height: 32px;
+  outline: none;
+}

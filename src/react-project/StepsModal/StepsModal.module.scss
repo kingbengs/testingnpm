@@ -1,0 +1,265 @@
+@import "~react-project/styles/variables";
+
+$border-color : #ebeced;
+
+.Modal {
+  left: 3.8rem;
+  overflow: hidden;
+  width: 25rem;
+  height: 27rem;
+  position: absolute;
+  pointer-events: all;
+  z-index: 10;
+  top: .5rem;
+  background: #fff;
+  transition: .15s all ease-in-out;
+  box-shadow: 0 4px 15px rgba(32, 51, 89, .1), 0 2px 4px rgba(26, 42, 74, .03);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .PageIconsTabs {
+    display: flex;
+
+    .PageIconTab {
+      flex-basis: 0;
+      flex-grow: 1;
+      background: #1e2532;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      font-size: 11px;
+      height: 32px;
+      outline: 0;
+      cursor: pointer;
+    }
+
+    .Active {
+      background: #07090D;
+      color: #009bf3;
+    }
+  }
+
+  .TopSectionIcon {
+    border-bottom: 1px solid $border-color;
+    height: 32px;
+    display: flex;
+
+    .Chip {
+      padding: 2px 10px;
+      background: 0 0;
+      font-size: 11px;
+      cursor: pointer;
+      flex-basis: 0;
+      flex-grow: 1;
+      color: #9AA5B5;
+      font-weight: 500;
+      border-color: $border-color;
+      border-style: solid;
+      border-width: 0 1px 0 0;
+      border-radius: 0;
+      outline: none;
+
+      .ChipIcon {
+        fill: currentColor;
+        width: 12px;
+        height: 12px;
+        margin-right: 4px;
+        vertical-align: sub;
+      }
+
+      .ChipText {
+        vertical-align: middle;
+      }
+    }
+
+    .Active {
+      background: rgba(0, 0, 0, .05);
+      color: #009bf3;
+    }
+  }
+
+  .SearchSection {
+    position: relative;
+    color: #9AA5B5;
+    border-bottom: 1px solid $border-color;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 11px;
+      left: 19px;
+      fill: currentColor;
+    }
+
+    .Search {
+      color: currentColor;
+      display: flex;
+      justify-content: center;
+      height: 1.1rem;
+      padding: .5rem .5rem .5rem 2.5rem;
+      border: none;
+      outline: 0;
+      width: 80%;
+      background: #fff;
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+  }
+
+  .IconsSection {
+    padding: 0 1.3rem;
+    height: 320px;
+    overflow-y: auto; // overflow for Firefox
+    overflow-y: overlay; // overflow for webkit browsers
+
+    .IconsSet {
+      display: grid;
+      grid-template-columns: 64px 64px 64px 64px 64px;
+      row-gap: 1rem;
+      column-gap: .6rem;
+      font-size: .625rem;
+      margin: .75rem 0;
+
+      .ListItem {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        width: 64px;
+
+        .IconContainer {
+          user-select: all;
+          pointer-events: all;
+          cursor: grab;
+          width: 100%;
+          margin: 0 auto;
+          display: contents;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .IconTitle {
+          width: 100%;
+          display: block;
+          text-align: center;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          word-wrap: inherit;
+          margin-top: 3px;
+          color: #9AA5B5;
+        }
+      }
+    }
+  }
+
+  .CustomIconsButton {
+    width: 100%;
+    background: #fff;
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    justify-content: center;
+    height: 32px;
+    font-weight: 700;
+    box-sizing: border-box;
+    border-color: $border-color;
+    border-style: solid;
+    border-width: 1px 0 0;
+    cursor: pointer;
+    color: #9AA5B5;
+    display: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .ExplorerSection {
+    display: block;
+    height: 100%;
+  }
+
+  .StepsContainer {
+    height: 100%;
+    overflow-y: auto; // overflow for Firefox
+    overflow-y: overlay; // overflow for webkit browsers
+    max-height: 319px;
+
+    .StepsItem, .LoadMore {
+      padding: 8px 20px;
+      border-bottom: 1px solid #D8DDE6;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      overflow-y: hidden;
+      color: #9AA5B5;
+      font-size: .8125rem;
+    }
+
+    .LoadMore {
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .StepsUrl {
+      font-weight: bold;
+      display: flex;
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+      }
+    }
+
+  }
+}
+
+.NoAttributesMessage {
+  padding: 8px 20px;
+  color: $grey-font-1;
+  font-size: .8125rem;
+  border-bottom: 1px solid $brand-grey-4;
+}
+
+.ExplorerSectionHeader {
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+}
+
+.RefreshBtn {
+  background-color: #07090D;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  color: #9AA5B5;
+
+  svg {
+    fill: #9AA5B5;
+    font-size: 13px;
+    height: 32px;
+    width: 1rem;
+  }
+}
+
+.StepsTitle {
+  color: #4A5468;
+  font-size: .85rem;
+  font-weight: 700;
+  align-self: center;
+}

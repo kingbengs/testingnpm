@@ -1,0 +1,374 @@
+@import "~react-project/styles/variables";
+
+.Wrapper {
+  pointer-events: all;
+  height: 53px;
+  display: block;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px rgba(49, 57, 75, 0.25);
+  z-index: $header-z-index;
+}
+
+.AnalyticsHeaderPanel {
+  svg {
+    font-size: 20px;
+    display: flex;
+    color: #9aa5b5;
+    fill: #9aa5b5;
+    box-sizing: content-box;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+  }
+}
+
+.Header {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px rgba(49, 57, 75, 0.25);
+}
+
+.LeftSection,
+.RightSection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.RightSection {
+  color: #636e84;
+  svg {
+    cursor: pointer;
+  }
+
+  .RightSectionButton {
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    width: 47px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &:hover {
+      fill: #009bf3;
+      background: $hover-color;
+    }
+  }
+}
+
+.SavedTime {
+  font-size: 12px;
+  font-style: italic;
+  margin-right: 15px;
+
+  .Error {
+    color: #9E323E;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+  }
+}
+
+.BackBtnIcon {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.ToolsSection {
+  position: relative;
+}
+
+.Logo {
+  display: block;
+  height: 32px;
+  padding: 0 10px;
+}
+
+.CanvasName {
+  font-size: 12px;
+  color: #4a5468;
+  white-space: nowrap;
+
+  @media (max-width: 1250px) {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.Save {
+  background: #009bf3;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 32px;
+  color: #fff;
+  border-style: none;
+  padding: 0 15px;
+}
+
+.AnalyticsHeaderPanel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  margin-top: 5px;
+  right: 0;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 4px;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 6px rgba(49, 57, 75, 0.25);
+    margin: 0 5px;
+  }
+
+  .DataFilterBlock {
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #495057;
+    position: relative;
+
+    .Separator {
+      width: 1px;
+      height: 32px;
+      background: #d6dee6;
+      margin: 0 10px;
+    }
+
+    .DataPicker {
+      cursor: pointer;
+    }
+
+    .iconFilter {
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+
+  .AnalyticsBtn {
+    cursor: not-allowed;
+  }
+}
+
+.RefreshBtn,
+.AnalyticsBtn {
+  width: 3rem;
+}
+
+.RefreshBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 47px;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    background: $hover-color;
+  }
+  svg {
+    width: 16px;
+    fill: #636e84;
+  }
+}
+
+.Rotated {
+  svg {
+    animation: rotation 2s infinite linear;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.AnalyticsStatusIcon {
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+  svg {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+.RefreshWrapper {
+  display: flex;
+  height: 100%;
+}
+
+.AnalyticsStatusText {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: 12px;
+  color: #636e84;
+  margin-left: 10px;
+}
+
+.AnalyticsStatusBtn {
+  color: #009bf3;
+  cursor: pointer;
+}
+
+.UniversalLoader {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  top: 54px;
+  z-index: 2;
+
+  .UniversalLoaderBar {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+    background: #009bf3;
+    width: 0;
+    animation: borealisBar 3s linear infinite;
+  }
+}
+
+@keyframes borealisBar {
+  0% {
+    left: 0%;
+    right: 100%;
+    width: 0%;
+  }
+  30% {
+    left: 0%;
+    right: 25%;
+    width: 75%;
+  }
+  50% {
+    right: 0%;
+    left: 25%;
+    width: 75%;
+  }
+  100% {
+    left: 100%;
+    right: 0%;
+    width: 0%;
+  }
+}
+
+.ZoomDropdownTriggerContent {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ZoomDropdownTrigger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-width: 47px;
+  font-size: 12px;
+
+  .TriggerIcon {
+    width: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+  }
+  .TriggerIconOpened {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background: $hover-color;
+  }
+}
+
+.HeaderActionsDropdown {
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+}
+
+.HeaderActionsDropdownContent {
+  width: 105%;
+  top: calc(100% - 5px);
+}
+
+.HeaderActionsDropdownTrigger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 12px;
+  width: 100%;
+  padding: 0 20px;
+
+  .TriggerIcon {
+    width: 8px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .TriggerIconOpened {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background: $hover-color;
+  }
+}
+
+.ZoomDropdown {
+  height: 100%;
+  cursor: pointer;
+}
+
+.ZoomDropdownContent {
+  min-width: 220px;
+}
+
+.ZoomInputWrapper {
+  padding: 14px 12px;
+  box-sizing: border-box;
+  position: relative;
+  input {
+    box-sizing: border-box;
+    border: 1px solid $input-border;
+    margin: 0;
+    width: 100%;
+    border-radius: 4px;
+    color: $subtitle-grey;
+    padding: 6px 8px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .ZoomInputIcon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    svg {
+      width: 12px;
+    }
+  }
+}

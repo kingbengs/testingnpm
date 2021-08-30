@@ -1,0 +1,22 @@
+[data-reach-tooltip] {
+  border: none;
+  background: red;
+  box-shadow: none;
+  padding: 0;
+  z-index: 1000;
+}
+
+.TooltipLabel {
+  border: none;
+  transform-origin: center top;
+}
+
+.Triangle {
+  position: absolute;
+  z-index: 100;
+}
+
+.TooltipWithHotkey {
+  display: flex;
+  align-items: center;
+}

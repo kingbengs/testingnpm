@@ -1,0 +1,8 @@
+@import '~react-project/styles/variables';
+
+.DisclosurePanel {
+  display: none;
+  &.DisclosurePanelOpened {
+    display: initial;
+  }
+}

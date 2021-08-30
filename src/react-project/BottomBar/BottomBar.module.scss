@@ -1,0 +1,114 @@
+@import "~react-project/styles/variables";
+
+.BottomBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 253px;
+  background: #F9F9F9;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  pointer-events: all;
+  display: flex;
+  z-index: $bottom-bar-z-index;
+}
+
+.SessionsListWrapper {
+  max-height: 207px;
+  overflow-y: auto; // overflow for Firefox
+  overflow-y: overlay; // overflow for webkit browsers
+  height: 100%;
+}
+
+.BottomBarHidden {
+  display: none;
+}
+
+.Section {
+  position: relative;
+  width: 50%;
+  border-right: 1px solid #E5E5E5;
+}
+
+.SectionWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.ListHeader {
+  display: flex;
+  height: 36px;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+  background: #ECEDEF;
+  color: #7d7d7d;
+  font-size: 12px;
+}
+
+.ListItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 34px;
+  align-items: center;
+  color: $grey-light-1;
+  font-size: 12px;
+  padding: 0 20px 0 15px;
+
+  &:nth-child(even) {
+    background-color: $brand-grey-5;
+  }
+}
+
+.ListItemNameWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ListItemName {
+  padding-left: 8px;
+}
+
+.ColumnPadding {
+  padding-left: 32px;
+}
+
+.ListItemPercent {
+  color: $grey-font-1;
+}
+
+.SectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  font-size: 13px;
+  padding: 0 10px 0 16px;
+  b {
+    color: $grey-light-1;
+  }
+}
+
+.LoadMoreSessions {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+  color: #212529;
+  font-size: 14px;
+}
+
+.MediumButton {
+  min-width: 130px;
+}
+
+.SectionSearch {
+  height: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 0 10px 0 16px;
+}

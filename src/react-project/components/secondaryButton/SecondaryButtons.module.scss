@@ -1,0 +1,22 @@
+.FilterBtn {
+  font-family: inherit;
+  padding: 4px 0;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: #4A5468;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.WithBorder {
+  border: 1px solid #4A5468;
+  border-radius: 23px;
+  padding: 4px 11px;
+  margin: 0 10px;
+}

@@ -1,0 +1,494 @@
+{
+  "params": {
+    "baseUrl": "./"
+  },
+  "assets": [
+    {
+			"path": "./close.png",
+			"name": "close.png"
+		},
+    {
+			"path": "./filter_focus_icon_1.png",
+			"name": "filter_focus_icon_1.png"
+		},
+		{
+			"path": "./filter_focus_icon_2.png",
+			"name": "filter_focus_icon_2.png"
+		},
+    {
+      "path": "./no-data.png",
+      "name": "no-data.png"
+    },
+    {
+      "path": "./bitmap-fonts/roboto.fnt",
+      "name": "roboto"
+    },
+    {
+      "path": "./circle.png",
+      "name": "circle.png"
+    },
+    {
+      "path": "./icon.png",
+      "name": "icon.png"
+    },
+    {
+      "path": "./delete.svg",
+      "name": "delete.svg"
+    },
+    {
+      "path": "./settings.svg",
+      "name": "settings.svg"
+    },
+    {
+      "path": "./leftArrowHead.png",
+      "name": "leftArrowHead.png"
+    },
+    {
+      "path": "./rightArrowHead.png",
+      "name": "rightArrowHead.png"
+    },
+    {
+      "path": "./StepsModal/Actions/addtag.png",
+      "name": "StepsModal/Actions/addtag.png"
+    },
+    {
+      "path": "./StepsModal/Actions/addtolist.png",
+      "name": "StepsModal/Actions/addtolist.png"
+    },
+    {
+      "path": "./StepsModal/Actions/addtocart.png",
+      "name": "StepsModal/Actions/addtocart.png"
+    },
+    {
+      "path": "./StepsModal/Actions/application.png",
+      "name": "StepsModal/Actions/application.png"
+    },
+    {
+      "path": "./StepsModal/Actions/click.png",
+      "name": "StepsModal/Actions/click.png"
+    },
+    {
+      "path": "./StepsModal/Actions/contact.png",
+      "name": "StepsModal/Actions/contact.png"
+    },
+    {
+      "path": "./StepsModal/Actions/lead.png",
+      "name": "StepsModal/Actions/lead.png"
+    },
+    {
+      "path": "./StepsModal/Actions/popup.png",
+      "name": "StepsModal/Actions/popup.png"
+    },
+    {
+      "path": "./StepsModal/Actions/purchase.png",
+      "name": "StepsModal/Actions/purchase.png"
+    },
+    {
+      "path": "./StepsModal/Actions/requestcontact.png",
+      "name": "StepsModal/Actions/requestcontact.png"
+    },
+    {
+      "path": "./StepsModal/Actions/requestinfo.png",
+      "name": "StepsModal/Actions/requestinfo.png"
+    },
+    {
+      "path": "./StepsModal/Actions/schedulemeeting.png",
+      "name": "StepsModal/Actions/schedulemeeting.png"
+    },
+    {
+      "path": "./StepsModal/Actions/scroll.png",
+      "name": "StepsModal/Actions/scroll.png"
+    },
+    {
+      "path": "./StepsModal/Actions/watchvideo.png",
+      "name": "StepsModal/Actions/watchvideo.png"
+    },
+    {
+      "path": "./StepsModal/Offline/activecampaign.png",
+      "name": "StepsModal/Offline/activecampaign.png"
+    },
+    {
+      "path": "./StepsModal/Offline/billboard.png",
+      "name": "StepsModal/Offline/billboard.png"
+    },
+    {
+      "path": "./StepsModal/Offline/businesscard.png",
+      "name": "StepsModal/Offline/businesscard.png"
+    },
+    {
+      "path": "./StepsModal/Offline/clock.png",
+      "name": "StepsModal/Offline/clock.png"
+    },
+    {
+      "path": "./StepsModal/Offline/conference.png",
+      "name": "StepsModal/Offline/conference.png"
+    },
+    {
+      "path": "./StepsModal/Offline/constantcontact.png",
+      "name": "StepsModal/Offline/constantcontact.png"
+    },
+    {
+      "path": "./StepsModal/Offline/directmail.png",
+      "name": "StepsModal/Offline/directmail.png"
+    },
+    {
+      "path": "./StepsModal/Offline/drift.png",
+      "name": "StepsModal/Offline/drift.png"
+    },
+    {
+      "path": "./StepsModal/Offline/drip.png",
+      "name": "StepsModal/Offline/drip.png"
+    },
+    {
+      "path": "./StepsModal/Offline/gotomeeting.png",
+      "name": "StepsModal/Offline/gotomeeting.png"
+    },
+    {
+      "path": "./StepsModal/Offline/hubspot.png",
+      "name": "StepsModal/Offline/hubspot.png"
+    },
+    {
+      "path": "./StepsModal/Offline/insightly.png",
+      "name": "StepsModal/Offline/insightly.png"
+    },
+    {
+      "path": "./StepsModal/Offline/intercom.png",
+      "name": "StepsModal/Offline/intercom.png"
+    },
+    {
+      "path": "./StepsModal/Offline/jobinterview.png",
+      "name": "StepsModal/Offline/jobinterview.png"
+    },
+    {
+      "path": "./StepsModal/Offline/keap.png",
+      "name": "StepsModal/Offline/keap.png"
+    },
+    {
+      "path": "./StepsModal/Offline/mailchimp.png",
+      "name": "StepsModal/Offline/mailchimp.png"
+    },
+    {
+      "path": "./StepsModal/Offline/marketo.png",
+      "name": "StepsModal/Offline/marketo.png"
+    },
+    {
+      "path": "./StepsModal/Offline/meeting.png",
+      "name": "StepsModal/Offline/meeting.png"
+    },
+    {
+      "path": "./StepsModal/Offline/nextfunnel.png",
+      "name": "StepsModal/Offline/nextfunnel.png"
+    },
+    {
+      "path": "./StepsModal/Offline/ontraport.png",
+      "name": "StepsModal/Offline/ontraport.png"
+    },
+    {
+      "path": "./StepsModal/Offline/phone.png",
+      "name": "StepsModal/Offline/phone.png"
+    },
+    {
+      "path": "./StepsModal/Offline/pipedrive.png",
+      "name": "StepsModal/Offline/pipedrive.png"
+    },
+    {
+      "path": "./StepsModal/Offline/print.png",
+      "name": "StepsModal/Offline/print.png"
+    },
+    {
+      "path": "./StepsModal/Offline/qrcode.png",
+      "name": "StepsModal/Offline/qrcode.png"
+    },
+    {
+      "path": "./StepsModal/Offline/radio.png",
+      "name": "StepsModal/Offline/radio.png"
+    },
+    {
+      "path": "./StepsModal/Offline/salesforce.png",
+      "name": "StepsModal/Offline/salesforce.png"
+    },
+    {
+      "path": "./StepsModal/Offline/slack.png",
+      "name": "StepsModal/Offline/slack.png"
+    },
+    {
+      "path": "./StepsModal/Offline/sms.png",
+      "name": "StepsModal/Offline/sms.png"
+    },
+    {
+      "path": "./StepsModal/Offline/telegram.png",
+      "name": "StepsModal/Offline/telegram.png"
+    },
+    {
+      "path": "./StepsModal/Offline/tvad.png",
+      "name": "StepsModal/Offline/tvad.png"
+    },
+    {
+      "path": "./StepsModal/Offline/workshopseminar.png",
+      "name": "StepsModal/Offline/workshopseminar.png"
+    },
+    {
+      "path": "./StepsModal/Offline/zapier.png",
+      "name": "StepsModal/Offline/zapier.png"
+    },
+    {
+      "path": "./StepsModal/Offline/zendesk.png",
+      "name": "StepsModal/Offline/zendesk.png"
+    },
+    {
+      "path": "./StepsModal/Offline/zoho.png",
+      "name": "StepsModal/Offline/zoho.png"
+    },
+    {
+      "path": "./StepsModal/Offline/zoom.png",
+      "name": "StepsModal/Offline/zoom.png"
+    },
+    {
+      "path": "./StepsModal/Pages/blank.png",
+      "name": "StepsModal/Pages/blank.png"
+    },
+    {
+      "path": "./StepsModal/Pages/blogpost.png",
+      "name": "StepsModal/Pages/blogpost.png"
+    },
+    {
+      "path": "./StepsModal/Pages/calendar.png",
+      "name": "StepsModal/Pages/calendar.png"
+    },
+    {
+      "path": "./StepsModal/Pages/download.png",
+      "name": "StepsModal/Pages/download.png"
+    },
+    {
+      "path": "./StepsModal/Pages/genericpage.png",
+      "name": "StepsModal/Pages/genericpage.png"
+    },
+    {
+      "path": "./StepsModal/Pages/membersarea.png",
+      "name": "StepsModal/Pages/membersarea.png"
+    },
+    {
+      "path": "./StepsModal/Pages/optin.png",
+      "name": "StepsModal/Pages/optin.png"
+    },
+    {
+      "path": "./StepsModal/Pages/orderpage.png",
+      "name": "StepsModal/Pages/orderpage.png"
+    },
+    {
+      "path": "./StepsModal/Pages/popup.png",
+      "name": "StepsModal/Pages/popup.png"
+    },
+    {
+      "path": "./StepsModal/Pages/salespage.png",
+      "name": "StepsModal/Pages/salespage.png"
+    },
+    {
+      "path": "./StepsModal/Pages/salespagevideo.png",
+      "name": "StepsModal/Pages/salespagevideo.png"
+    },
+    {
+      "path": "./StepsModal/Pages/survey.png",
+      "name": "StepsModal/Pages/survey.png"
+    },
+    {
+      "path": "./StepsModal/Pages/thankyou.png",
+      "name": "StepsModal/Pages/thankyou.png"
+    },
+    {
+      "path": "./StepsModal/Pages/upselloto.png",
+      "name": "StepsModal/Pages/upselloto.png"
+    },
+    {
+      "path": "./StepsModal/Pages/webinarlive.png",
+      "name": "StepsModal/Pages/webinarlive.png"
+    },
+    {
+      "path": "./StepsModal/Pages/webinarreplay.png",
+      "name": "StepsModal/Pages/webinarreplay.png"
+    },
+    {
+      "path": "./StepsModal/Sources/network.png",
+      "name": "StepsModal/Sources/network.png"
+    },
+    {
+      "path": "./StepsModal/Sources/affiliateprogram.png",
+      "name": "StepsModal/Sources/affiliateprogram.png"
+    },
+    {
+      "path": "./StepsModal/Sources/amazon.png",
+      "name": "StepsModal/Sources/amazon.png"
+    },
+    {
+      "path": "./StepsModal/Sources/banner.png",
+      "name": "StepsModal/Sources/banner.png"
+    },
+    {
+      "path": "./StepsModal/Sources/bing.png",
+      "name": "StepsModal/Sources/bing.png"
+    },
+    {
+      "path": "./StepsModal/Sources/bizdirectory.png",
+      "name": "StepsModal/Sources/bizdirectory.png"
+    },
+    {
+      "path": "./StepsModal/Sources/careersite.png",
+      "name": "StepsModal/Sources/careersite.png"
+    },
+    {
+      "path": "./StepsModal/Sources/chatbox.png",
+      "name": "StepsModal/Sources/chatbox.png"
+    },
+    {
+      "path": "./StepsModal/Sources/chatbot.png",
+      "name": "StepsModal/Sources/chatbot.png"
+    },
+    {
+      "path": "./StepsModal/Sources/clutch.png",
+      "name": "StepsModal/Sources/clutch.png"
+    },
+    {
+      "path": "./StepsModal/Sources/email.png",
+      "name": "StepsModal/Sources/email.png"
+    },
+    {
+      "path": "./StepsModal/Sources/facebookad.png",
+      "name": "StepsModal/Sources/facebookad.png"
+    },
+    {
+      "path": "./StepsModal/Sources/facebookpost.png",
+      "name": "StepsModal/Sources/facebookpost.png"
+    },
+    {
+      "path": "./StepsModal/Sources/facebook.png",
+      "name": "StepsModal/Sources/facebook.png"
+    },
+    {
+      "path": "./StepsModal/Sources/gmail.png",
+      "name": "StepsModal/Sources/gmail.png"
+    },
+    {
+      "path": "./StepsModal/Sources/googlenotblocked.png",
+      "name": "StepsModal/Sources/googlenotblocked.png"
+    },
+    {
+      "path": "./StepsModal/Sources/googlemaps.png",
+      "name": "StepsModal/Sources/googlemaps.png"
+    },
+    {
+      "path": "./StepsModal/Sources/google.png",
+      "name": "StepsModal/Sources/google.png"
+    },
+    {
+      "path": "./StepsModal/Sources/guestblog.png",
+      "name": "StepsModal/Sources/guestblog.png"
+    },
+    {
+      "path": "./StepsModal/Sources/instagramad.png",
+      "name": "StepsModal/Sources/instagramad.png"
+    },
+    {
+      "path": "./StepsModal/Sources/instagrampost.png",
+      "name": "StepsModal/Sources/instagrampost.png"
+    },
+    {
+      "path": "./StepsModal/Sources/instagramstory.png",
+      "name": "StepsModal/Sources/instagramstory.png"
+    },
+    {
+      "path": "./StepsModal/Sources/instagram.png",
+      "name": "StepsModal/Sources/instagram.png"
+    },
+    {
+      "path": "./StepsModal/Sources/jobsite.png",
+      "name": "StepsModal/Sources/jobsite.png"
+    },
+    {
+      "path": "./StepsModal/Sources/linkedinad.png",
+      "name": "StepsModal/Sources/linkedinad.png"
+    },
+    {
+      "path": "./StepsModal/Sources/linkedinpost.png",
+      "name": "StepsModal/Sources/linkedinpost.png"
+    },
+    {
+      "path": "./StepsModal/Sources/linkedin.png",
+      "name": "StepsModal/Sources/linkedin.png"
+    },
+    {
+      "path": "./StepsModal/Sources/messengerbot.png",
+      "name": "StepsModal/Sources/messengerbot.png"
+    },
+    {
+      "path": "./StepsModal/Sources/messenger.png",
+      "name": "StepsModal/Sources/messenger.png"
+    },
+    {
+      "path": "./StepsModal/Sources/microsoftads.png",
+      "name": "StepsModal/Sources/microsoftads.png"
+    },
+    {
+      "path": "./StepsModal/Sources/onlinemeeting.png",
+      "name": "StepsModal/Sources/onlinemeeting.png"
+    },
+    {
+      "path": "./StepsModal/Sources/pinterest.png",
+      "name": "StepsModal/Sources/pinterest.png"
+    },
+    {
+      "path": "./StepsModal/Sources/reddit.png",
+      "name": "StepsModal/Sources/reddit.png"
+    },
+    {
+      "path": "./StepsModal/Sources/report.png",
+      "name": "StepsModal/Sources/report.png"
+    },
+    {
+      "path": "./StepsModal/Sources/search.png",
+      "name": "StepsModal/Sources/search.png"
+    },
+    {
+      "path": "./StepsModal/Sources/snapchat.png",
+      "name": "StepsModal/Sources/snapchat.png"
+    },
+    {
+      "path": "./StepsModal/Sources/source.png",
+      "name": "StepsModal/Sources/source.png"
+    },
+    {
+      "path": "./StepsModal/Sources/spotify.png",
+      "name": "StepsModal/Sources/spotify.png"
+    },
+    {
+      "path": "./StepsModal/Sources/tiktok.png",
+      "name": "StepsModal/Sources/tiktok.png"
+    },
+    {
+      "path": "./StepsModal/Sources/twitter.png",
+      "name": "StepsModal/Sources/twitter.png"
+    },
+    {
+      "path": "./StepsModal/Sources/yelp.png",
+      "name": "StepsModal/Sources/yelp.png"
+    },
+    {
+      "path": "./StepsModal/Sources/youtubeads.png",
+      "name": "StepsModal/Sources/youtubeads.png"
+    },
+    {
+      "path": "./StepsModal/Sources/youtubeseries.png",
+      "name": "StepsModal/Sources/youtubeseries.png"
+    },
+    {
+      "path": "./StepsModal/Sources/youtube.png",
+      "name": "StepsModal/Sources/youtube.png"
+    },
+    {
+      "path": "./StepsModal/Sources/trafficicon.png",
+      "name": "StepsModal/Sources/trafficicon.png"
+    }
+  ],
+  "metadata": {
+    "type": "assetsList"
+  }
+}

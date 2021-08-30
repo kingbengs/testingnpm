@@ -1,0 +1,124 @@
+@import "~react-project/styles/variables";
+
+.ColorPickerTab {
+  width: 151px;
+  .Label {
+    border-bottom: 1px solid #D8DDE6;
+  }
+}
+
+
+.Wrapper {
+  margin: 7px 11px 9px 11px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+
+  button {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16px;
+    width: 16px;
+    min-width: 16px;
+    border-radius: 100%;
+    padding: 0;
+    margin: 7px;
+  }
+
+  .Transparent {
+    background: url('/asset/transparent.png');
+
+    &:hover {
+      box-shadow:  $color-picker-border;
+    }
+  }
+
+  .White {
+    border: 1px solid #D6DEE6;
+    background-color: $picker-white;
+
+    &:hover {
+      box-shadow:  $color-picker-border;
+    }
+  }
+
+  .Blue {
+    background-color: $picker-blue;
+
+    &:hover {
+      box-shadow:  $color-picker-border;
+    }
+  }
+
+  .Purple {
+    background-color: $picker-purple;
+
+    &:hover {
+      box-shadow:  $color-picker-border;
+    }
+  }
+
+  .Red {
+    background-color: $picker-red;
+
+    &:hover {
+      box-shadow:  $color-picker-border;
+    }
+  }
+
+  .Orange {
+    background-color: $picker-orange;
+
+    &:hover {
+      box-shadow:  $color-picker-border;
+    }
+  }
+
+  .Yellow {
+    background-color: $picker-yellow;
+
+    &:hover {
+      box-shadow:  $color-picker-border;
+    }
+  }
+
+  .Green {
+    background-color: $picker-green;
+
+    &:hover {
+      box-shadow:  $color-picker-border;
+    }
+  }
+
+  .Teal {
+    background-color: $picker-teal;
+
+    &:hover {
+      box-shadow:  $color-picker-border;
+    }
+  }
+
+  .Black {
+    background-color: $picker-black;
+
+    &:hover {
+      box-shadow:  $color-picker-border;
+    }
+  }
+
+  .Grey {
+    background-color: $picker-grey;
+
+    &:hover {
+      box-shadow:  $color-picker-border;
+    }
+  }
+
+  .ActiveColor {
+    box-shadow:  $color-picker-border;
+  }
+
+}

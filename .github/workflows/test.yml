@@ -1,0 +1,35 @@
+name: "build-test"
+on: # rebuild any PRs and main branch changes
+  pull_request:
+  push:
+    branches:
+      - master
+      - 'releases/*'
+
+jobs:
+  build: # make sure build/ci work properly
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        npm ci
+        npm run all
+    - uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+  test: # make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+    - uses: actions/checkout@v2
+    - uses: ./
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        issue_title: npm audit run by test job
+    - uses: ./
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        working_directory: __tests__/testdata/workdir/

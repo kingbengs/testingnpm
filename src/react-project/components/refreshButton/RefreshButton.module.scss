@@ -1,0 +1,65 @@
+@import "~react-project/styles/variables";
+
+.ReloadBtn {
+  background: $brand-black-2;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+
+  svg {
+    font-size: 13px;
+    height: 13px;
+    display: flex;
+    color: $grey-font-1;
+    fill: $grey-font-1;
+    box-sizing: content-box;
+  }
+}
+
+.AnalyticsReloading {
+  background: $brand-black-2;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  svg {
+    font-size: 13px;
+    height: 13px;
+    display: flex;
+    color: $grey-font-1;
+    fill: $grey-font-1;
+    box-sizing: content-box;
+    animation: rotation 2s infinite linear;
+  }
+}
+
+.ThumbnailLoad {
+  background: $white;
+  height: 31px;
+}
+
+.RefreshBtnStatus {
+  bottom: 2px;
+  right: 3px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  svg {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+@keyframes rotation {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

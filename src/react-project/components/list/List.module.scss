@@ -1,0 +1,41 @@
+.List,
+.ListItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.Pagination {
+  display: flex;
+
+}
+
+.PreviousPage,
+.NextPage {
+  margin: 0 8px;
+  cursor: pointer;
+  svg {
+    width:0.75rem;
+    height: 0.75rem;
+  }
+}
+
+.NextPrevDisabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.PreviousPage {
+  svg {
+    transform: rotate(90deg);
+  }
+}
+
+.NextPage {
+  svg {
+    transform: rotate(-90deg);
+  }
+}
+
+.CurrentRange {
+  color: #7d7d7d;
+}

@@ -1,0 +1,69 @@
+@import "~react-project/styles/variables";
+
+.VersionHistoryWrapper {
+  position: fixed;
+  left: 0;
+  z-index: 1;
+  background: #f9f9f9;
+  height: calc(100vh - 310px);
+  overflow-y: auto;
+  width: 335px;
+  border-right: 1px solid #e5e5e5;
+}
+
+.FullHeight {
+  height: calc(100% - 60px);
+}
+
+.VersionHistoryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+.VersionHistoryContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.CloseButton {
+  cursor: pointer;
+  display: flex;
+}
+
+.VersionHistoryTitle {
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.VersionHistoryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid $top-bar-separator-color;
+  &:last-child {
+    border-bottom: 1px solid $top-bar-separator-color;
+  }
+}
+
+.RestoreVersionButton {
+  margin-right: 0;
+}
+
+.VersionHistoryItemDatetime {
+  font-size: 11px;
+  color: $grey-light-1;
+}
+
+.VersionHistoryLoadMore {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.VersionHistoryLoadMoreButton {
+  min-width: 130px;
+}

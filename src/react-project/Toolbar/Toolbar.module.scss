@@ -1,0 +1,955 @@
+@import "~react-project/styles/variables";
+
+$step-toolbar-width: 500px;
+@value StepToolbarWidth #{$step-toolbar-width};
+
+.Toolbar {
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  width: unset;
+  box-shadow: 0 4px 8px rgba(30, 37, 50, .05);
+
+  svg {
+    width: 17px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+}
+
+.ToolbarMultiple {
+  overflow: visible;
+}
+
+.ContextMenu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  background: $white;
+  border: 1px solid $brand-grey-4;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(30, 37, 50, .05);
+  border-radius: 4px;
+  pointer-events: all;
+  min-width: 175px;
+
+  .ContextMenuTitle {
+    color: $subtitle-grey;
+  }
+}
+
+.ContextMenuWrapper {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  transition: all .2s ease-in-out;
+  padding: 10px 12px;
+  align-items: center;
+  border: none;
+  pointer-events: all;
+  cursor: pointer;
+  background: $white;
+  color: $grey-font-1;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+}
+
+.ContextMenuItem {
+  width: 200px;
+  height: 46px;
+  padding: 0 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: all;
+
+  span {
+    line-height: 2.7;
+    color: #9AA5B5;
+  }
+
+  &:hover {
+    background: $hover-color;
+    cursor: pointer;
+    span {
+      color: #009bf3;
+    }
+  }
+}
+
+.RightSidebar {
+  pointer-events: all;
+  height: calc(100vh - 48px);
+  position: absolute;
+  display: block;
+  overflow: visible;
+  width: 550px;
+  right: 0;
+  transform: none;
+  z-index: 500;
+  top: 64px;
+  transition: 0.5s right ease-in-out;
+
+  .SidebarWrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll; // overflow for Firefox
+    overflow-y: overlay; // overflow for webkit browsers
+    position: relative;
+    border-top: 1px solid #D8DDE6;
+    border-left: 1px solid #D8DDE6;
+    z-index: 1;
+    background-color: #fff;
+
+    .SettingsHeader {
+      display: flex;
+      background: rgba(0, 0, 0, .05);
+      height: 3rem;
+
+      button {
+        width: 32px;
+        height: 32px;
+        align-self: center;
+        background: #fff;
+        color: #9AA5B5;
+        border: none;
+        outline: 0;
+        cursor: pointer;
+        box-shadow: 0 0 6px rgba(49, 57, 75, .25);
+        border-radius: 4px;
+      }
+
+      .ContentTitle {
+        flex-grow: 1;
+        color: #1e2532;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: left;
+        align-self: center;
+        letter-spacing: .05em;
+        padding: 12px;
+      }
+
+      .CollapseButton {
+        margin-left: 7px;
+      }
+
+      .ToggleWideModeButton {
+        margin-right: 7px;
+        transition: all .1s ease-in-out;
+      }
+
+      svg {
+        width: 7px;
+        height: 12px;
+        fill: currentColor;
+      }
+
+      .IconSkipPrevious {
+        width: 12px;
+      }
+    }
+
+    .TopNav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 30px;
+      border-bottom: 1px solid #D8DDE6;
+      background-color: #fff;
+      height: 2.875rem;
+      width: 100%;
+      z-index: 100;
+
+      .FlTitle {
+        margin-right: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: .1em;
+        line-height: 1.2em;
+        color: #212529;
+        position: relative;
+      }
+      .DisableTitle {
+        cursor: not-allowed;
+      }
+
+      .TitleActive {
+
+        &::after {
+          content: '';
+          position: absolute;
+          margin-top: 21px;
+          width: 100%;
+          height: 2px;
+          background-color: #009bf3;
+        }
+      }
+    }
+
+    .SideBarHeader {
+      height: 3em;
+      font-weight: 500;
+      padding-left: 1.4em;
+      letter-spacing: 1.2px;
+      font-size: .8em;
+      width: 100%;
+      border-top: .09px solid #dadada;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+
+      .CollapsibleIcon {
+        font-weight: 900;
+        font-size: 16px;
+        width: 15px;
+      }
+
+      .CollapsibleHeader {
+        display: flex;
+        letter-spacing: .1rem;
+      }
+
+    }
+  }
+}
+
+.Label {
+  padding: 20px 30px;
+  border-bottom: 1px solid $top-bar-separator-color;
+
+  div {
+    width: 100%;
+  }
+
+  .SideBarLabel {
+    margin-left: 0;
+    color: #636e84;
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: .6px;
+    line-height: 14px;
+    margin-top: 0;
+    margin-bottom: .5rem;
+  }
+
+  .LabelWrapper {
+    display: flex;
+    margin-right: 12px;
+    position: relative;
+
+    .RsInput {
+      appearance: none;
+      padding: 6px 2rem 6px 13px;
+      display: flex;
+      margin: 2px 0 0;
+      background: #FFF;
+      border: 1px solid #D8DDE6;
+      box-sizing: border-box;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #1E2532;
+      width: 100%;
+      height: auto;
+      transition: all .3s ease-in-out;
+
+      &:focus {
+        outline: 0;
+        border: 1px solid #009bf3;
+      }
+    }
+
+    .UrlInput {
+      padding: 1px 72px 1px 13px;
+      margin: 0;
+      height: 33px;
+    }
+
+    .ThumbnailIcon {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 31px;
+      margin: 1px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid #D8DDE6;
+
+      svg {
+        width: 1em;
+        height: 1em;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: currentColor;
+        display: flex;
+        overflow: hidden;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.Settings {
+  padding: 20px 13px;
+  .InputWithLabel {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      font-size: 12px;
+      color: $grey-font-1;
+    }
+
+    .Input {
+      appearance: none;
+      padding: 6px 10px;
+      display: flex;
+      margin: 4px 0 0 0;
+      background: $white;
+      border: 1px solid $input-border;
+      box-sizing: border-box;
+      border-radius: 4px;
+      font-size: 13px;
+      color: $subtitle-grey;
+      width: 100%;
+      height: auto;
+      transition: all .3s ease-in-out;
+
+      &:focus {
+        outline: 0;
+        border: 1px solid #009bf3;
+      }
+    }
+
+    .ThumbnailIcon {
+      position: absolute;
+      bottom: 3px;
+      right: 6px;
+      background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 17px;
+
+      svg {
+        path {
+          fill: $subtitle-grey;
+        }
+      }
+      &:hover {
+        background: $hover-color;
+      }
+    }
+
+    .IconWithoutHover {
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.ThumbnailLoading {
+  background: transparent;
+  width: 17px;
+  height: 15px;
+}
+
+.CloseStyle {
+  right: -700px;
+}
+
+.OpenStyleFull {
+  width: 100%;
+
+  .ToggleWideModeButton {
+    background-color: red;
+    transform: rotate(180deg);
+  }
+}
+
+.OpenStyle {
+  right: 0;
+}
+
+.IconsSet {
+  transition: 0.5s top ease-in-out;
+  display: grid;
+  height: 100%;
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 2rem;
+
+  .ListItem {
+    object-fit: contain;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    .IconTitle {
+      font-size: 12px;
+      text-align: center;
+      width: 65px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .IconContainer {
+      width: 3rem;
+
+      img {
+        width: 3rem;
+      }
+    }
+  }
+}
+
+.OpenIconsBlock {
+  height: 100%;
+  overflow: hidden;
+}
+
+.CloseIconsBlock {
+  display: none;
+  overflow: hidden;
+}
+
+.expandableBlocks {
+  height: 100%;
+}
+
+.OpenNoteBlock {
+  display: block;
+}
+
+.CloseNoteBlock {
+  display: none;
+}
+
+.FilterLabel {
+  user-select: none;
+  cursor: pointer;
+  margin-right: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .CheckboxSpan {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #fbfbfe;
+    border: 1px solid #D8DDE6;
+    box-sizing: border-box;
+    box-shadow: inset 0 2px 0 #f0f2f7, inset 0 3px 1px #f0f2f7;
+    border-radius: 2.67px;
+    position: relative;
+    margin-right: 12px;
+  }
+  .Checkbox {
+    display: none;
+  }
+  .CheckboxText {
+    text-transform: uppercase;
+    color: #1E2532;
+    font-size: 13px;
+    display: inline-block;
+  }
+  .Checkbox:checked~.CheckboxSpan {
+    background: #009BF3;
+    border: 1px solid #0788E5;
+    box-shadow: none;
+    &:after {
+      content: '\2714';
+      font-size: 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: #fff;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}
+
+.TrackingTab {
+  width: $step-toolbar-width;
+  .Label {
+    border-bottom: 1px solid #D8DDE6;
+  }
+}
+
+.AddFilterBtn {
+  min-width: 7rem;
+  border-radius: 5px;
+  background: #999;
+  color: #fff;
+  fill: #fff;
+  height: 34px;
+  margin: 0;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.FilterRow {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  svg {
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .FilterItemParameter {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    max-width: 140px;
+    font-size: .75rem;
+    color: #636e84;
+    font-weight: 400;
+    letter-spacing: .6px;
+    line-height: 14px;
+    input, select {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      height: 24px;
+      font-size: 13px;
+      border: 1px solid #D8DDE6;
+      border-radius: .25rem;
+      &:focus {
+        outline: 0;
+        border: 1px solid #009bf3;
+      }
+    }
+  }
+}
+
+.EVENT {
+  .FilterItemParameter {
+    max-width: 220px;
+  }
+}
+
+.IconTest, .IconSettings, .IconAnothers, .IconFilter, .IconDelete, .Icon3Dots, .IconTracking, .IconAlignment {
+  display: flex;
+  flex-direction: row;
+  height: 46px;
+  transition: all .2s ease-in-out;
+  padding: 0 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  pointer-events: all;
+  cursor: pointer;
+  background: #ffffff;
+  color: $grey-font-1;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+.IconFilter {
+  svg {
+    fill: rgb(154, 165, 181);
+    width: 17px;
+    height: 16px;
+  }
+}
+
+.ActiveFocus {
+  background-color: #e5e5e5;
+  svg {
+    fill: #009bf3;
+  }
+}
+
+.StepToolbarContainer {
+  position: absolute;
+  z-index: $step-toolbar-z-index;
+
+  svg {
+    width: 17px;
+    height: 16px;
+    fill: currentColor;
+  }
+}
+
+.StepToolbarSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D8DDE6;
+  background-color: #fff;
+  border-radius: 4px;
+  width: unset;
+  box-shadow: 0 2px 4px rgba(26, 42, 74, 0.03), 0 4px 15px rgba(32, 51, 89, 0.1);
+}
+
+.StepToolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: all;
+}
+
+.StepToolbarTabsWrapper {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.StepToolbarTabs {
+  display: flex;
+}
+
+.StepToolbarTab {
+  border-right: 1px solid $brand-grey-4;
+  color: $subtitle-grey;
+  &:focus {
+    outline: none;
+  }
+}
+
+.StepToolbarTabActive {
+  color: $brand-blue;
+}
+
+.StepToolbarTabText {
+  padding-left: 13px;
+}
+
+.ToolbarTabText {
+  padding-left: 13px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #4A5468;
+}
+
+.StepSettings {
+  width: $step-toolbar-width;
+}
+
+.ContextMenuDropdown {
+  pointer-events: all;
+}
+
+.ContextMenuDropdownContent {
+  min-width: 250px;
+}
+
+.LineToolbarTab {
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  transition: all .2s ease-in-out;
+  padding: 0 2rem 0 0.5rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  pointer-events: all;
+  cursor: pointer;
+  border-right: 1px solid $brand-grey-4;
+}
+
+.LineTypeBtnActive {
+  background: #F0F2F7;
+  border-radius: 4px;
+}
+
+.LineTypeBtn {
+  padding: 6px;
+}
+
+.LineSettingDropdown {
+  pointer-events: all;
+  width: 100%;
+}
+
+.ShapeToolbarTab {
+  display: flex;
+  flex-direction: row;
+  height: 46px;
+  transition: all .2s ease-in-out;
+  padding: 0 0.5rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.ShapeToolbarTabActive {
+  .WrapperShape {
+    background: #F0F2F7;
+    border-radius: 4px;
+  }
+
+  .WrapperShapeFill {
+    background: #F0F2F7;
+    border-radius: 4px;
+  }
+
+}
+
+.WrapperShape {
+
+  padding: 9px;
+
+  button {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13px;
+    width: 13px;
+    border-radius: 100%;
+    padding: 0;
+  }
+}
+
+.WrapperShapeFill {
+
+  padding: 6px;
+
+  button {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 19px;
+    width: 19px;
+    border-radius: 100%;
+    padding: 0;
+  }
+}
+
+.BorderTransparent {
+  button {
+    box-shadow: 0 0 0 2px $picker-white, 0 0 0 3px $picker-grey;
+    border: 1px solid $picker-grey;
+    background-color: $picker-white;
+  }
+}
+
+.BorderWhite {
+  button {
+    box-shadow: 0 0 0 2px $picker-white, 0 0 0 3px $picker-grey;
+    border: 1px solid $picker-grey;
+    background-color: $picker-white;
+  }
+}
+
+.BorderBlue {
+  button {
+    box-shadow: 0 0 0 2px $picker-blue, 0 0 0 3px $picker-blue;
+    border: 1px solid $picker-blue;
+    background-color: $picker-white;
+  }
+}
+
+.BorderPurple {
+  button {
+    box-shadow: 0 0 0 2px $picker-purple, 0 0 0 3px $picker-purple;
+    border: 1px solid $picker-purple;
+    background-color: $picker-white;
+  }
+}
+
+.BorderRed {
+  button {
+    box-shadow: 0 0 0 2px $picker-red, 0 0 0 3px $picker-red;
+    border: 1px solid $picker-red;
+    background-color: $picker-white;
+  }
+}
+
+
+.BorderOrange {
+  button {
+    box-shadow: 0 0 0 2px $picker-orange, 0 0 0 3px $picker-orange;
+    border: 1px solid $picker-orange;
+    background-color: $picker-white;
+  }
+}
+
+
+.BorderYellow {
+  button {
+    box-shadow: 0 0 0 2px $picker-yellow, 0 0 0 3px $picker-yellow;
+    border: 1px solid $picker-yellow;
+    background-color: $picker-white;
+  }
+}
+
+.BorderGreen {
+  button {
+    box-shadow: 0 0 0 2px $picker-green, 0 0 0 3px $picker-green;
+    border: 1px solid $picker-green;
+    background-color: $picker-white;
+  }
+}
+
+.BorderTeal {
+  button {
+    box-shadow: 0 0 0 2px $picker-teal, 0 0 0 3px $picker-teal;
+    border: 1px solid $picker-teal;
+    background-color: $picker-white;
+  }
+}
+
+.BorderBlack {
+  button {
+    box-shadow: 0 0 0 2px $picker-black, 0 0 0 3px $picker-black;
+    border: 1px solid $picker-black;
+    background-color: $picker-white;
+  }
+}
+
+.BorderGrey {
+  button {
+    box-shadow: 0 0 0 2px $picker-grey, 0 0 0 3px $picker-grey;
+    border: 1px solid $picker-grey;
+    background-color: $picker-white;
+  }
+}
+
+.FillTransparent {
+  button {
+    background-image: url('/asset/transparent.png');
+  }
+}
+
+.FillWhite {
+  button {
+    background-color: $picker-white;
+    border: 1px solid $picker-grey;
+  }
+}
+
+.FillBlue {
+  button {
+    background-color: $picker-blue;
+  }
+}
+.FillPurple {
+  button {
+    background-color: $picker-purple;
+  }
+}
+
+.FillRed {
+  button {
+    background-color: $picker-red;
+  }
+}
+
+.FillOrange {
+  button {
+    background-color: $picker-orange;
+  }
+}
+
+.FillYellow {
+  button {
+    background-color: $picker-yellow;
+  }
+}
+
+.FillGreen {
+  button {
+    background-color: $picker-green;
+  }
+}
+
+.FillTeal {
+  button {
+    background-color: $picker-teal;
+  }
+}
+
+.FillBlack {
+  button {
+    background-color: $picker-black;
+  }
+}
+
+.FillGrey {
+  button {
+    background-color: $picker-grey;
+  }
+}
+
+
+.IconsListBlock {
+  display: flex;
+  padding: 0 20px 10px;
+  border-bottom: 1px solid $top-bar-separator-color;
+}
+
+.SearchIcon {
+  svg {
+    font-size: 10px;
+    color: $grey-light-1;
+    width: 12px;
+    height: 12px;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
+}
+
+.Search {
+  width: 100%;
+}

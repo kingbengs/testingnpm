@@ -1,0 +1,140 @@
+.Wrapper {
+  pointer-events: all;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+  transition: all 0.3s ease-out;
+
+  .AnalyticsControl {
+    display: flex;
+    background: #fff;
+    flex-direction: row;
+    left: 3.5rem;
+    transition: all 0.5s ease-out;
+    align-items: center;
+    height: 100%;
+    border-radius: 6px;
+    padding: 0 0 0 30px;
+
+    .AnalyticsControlItem {
+      display: flex;
+      align-items: center;
+      margin: 0 0.5rem;
+      height: 100%;
+    }
+
+    svg {
+      color: #b592ff;
+      transition: all 0.4s ease-in-out;
+      height: 16px;
+      width: 20px;
+      margin-right: 0.5rem;
+      stroke-width: 0;
+      stroke: currentColor;
+      fill: currentColor;
+    }
+
+    .IconSplitLink {
+      svg {
+        color: #009bf3;
+      }
+    }
+
+    .IconForecast {
+      svg {
+        color: #ff7448;
+      }
+    }
+
+    .Title {
+      color: #636e84;
+      font-size: 12px;
+    }
+
+    .SwitchWrapper {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin-right: 0.5rem;
+      .Switch {
+        position: relative;
+        margin-bottom: 0;
+        height: 14px;
+        width: 25px;
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .SliderRound {
+          border-radius: 34px;
+          position: absolute;
+          cursor: pointer;
+          background-color: #3d4b66;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 25px;
+          height: 14px;
+
+          &:before {
+            position: absolute;
+            border-radius: 50%;
+            content: "";
+            left: 4px;
+            bottom: 3px;
+            background-color: #fff;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            width: 10px;
+            height: 10px;
+            top: 2px;
+          }
+        }
+      }
+    }
+
+    .Active {
+      .SwitchWrapper {
+        .SliderRound {
+          background-color: #934cff;
+
+          &:before {
+            left: 50%;
+          }
+        }
+
+        &.IconSplitLink {
+          .SliderRound {
+            background-color: #009bf3;
+          }
+
+          .Title {
+            color: #009bf3;
+          }
+        }
+
+        &.IconForecast {
+          .SliderRound {
+            background-color: #ef7c54;
+          }
+
+          .Title {
+            color: #ef7c54;
+          }
+        }
+
+        &.IconNumber {
+          .Title {
+            color: #b592ff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,173 @@
+.Container {
+  position: absolute;
+  border: 1px solid #d8dde6;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(30, 37, 50, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  width: 400px;
+  background-color: #fff;
+  z-index: 100;
+  pointer-events: all;
+}
+
+.Header {
+  background: #1e2532;
+  justify-content: space-between;
+  padding: 8px 20px;
+  border-bottom: 1px solid #ebeced;
+  display: flex;
+}
+
+.AllSteps {
+  color: #9aa5b5;
+  font-size: 0.85rem;
+  font-weight: 700;
+  align-self: center;
+}
+
+.LabelBeta {
+  color: #009bf3;
+  font-size: 8px;
+  border: 1px solid currentColor;
+  padding: 3px;
+  margin-left: 9px;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.ScrolledContent {
+  width: 400px;
+  height: 321px;
+  overflow-y: scroll; // overflow for Firefox
+  overflow-y: overlay; // overflow for webkit browsers
+}
+
+.ItemBlock {
+  padding: 8px 20px;
+  border-bottom: 1px solid #d8dde6;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  color: #4a5468;
+  font-size: 0.85rem;
+  align-self: center;
+}
+
+.Strong {
+  font-weight: 700;
+  margin-right: 10px;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.SpaceBetween {
+  justify-content: space-between;
+}
+
+.LeftSideBlock {
+  display: flex;
+}
+
+.PlusBtn,
+.MinusBtn {
+  cursor: pointer;
+  color: #009bf3;
+  background-color: #009bf3;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  min-height: 1.5rem;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  & > svg {
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+}
+
+.MinusBtn {
+  background-color: #59657d;
+  & > svg {
+    fill: #fff;
+    width: 12px;
+    height: 2px;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+}
+
+.IndentBtn {
+  cursor: pointer;
+  margin-right: 20px;
+  transition: all 0.1s ease-in-out;
+  position: relative;
+
+  & > svg {
+    width: 6px;
+    height: 9px;
+    align-self: center;
+  }
+}
+
+.ExpandedBlock {
+  background-color: #f7f8fb;
+}
+
+.Expanded {
+  background-color: #f7f8fb;
+  .IndentBtn {
+    transform: rotate(90deg);
+  }
+}
+
+.DoubleIndentedBlock {
+  padding-left: 45px;
+}
+
+.SelectedAttr {
+  background-color: lightgray;
+}
+
+.AtrItem {
+  max-width: 130px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.AttributeKey {
+  display: flex;
+  svg {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.AttributeName {
+  svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+}
+
+.LoadMorePageParameters {
+  display: flex;
+  justify-content: center;
+  margin: 7px 0;
+  color: #212529;
+}

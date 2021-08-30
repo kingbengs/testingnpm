@@ -1,0 +1,29 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+canvas {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+#container {
+    top: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    pointer-events: none;
+    top: 0;
+    position: relative;
+}
+
+

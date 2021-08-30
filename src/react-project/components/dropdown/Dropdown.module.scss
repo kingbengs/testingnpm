@@ -1,0 +1,170 @@
+@import '~react-project/styles/variables';
+
+.Dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.DropdownContent {
+  box-shadow: 0 0 6px rgba(49, 57, 75, 0.25);
+  background: $white;
+  border-radius: 4px;
+  position: absolute;
+  top: calc(100% + 5px);
+  overflow: hidden;
+  z-index: $dropdown-content-z-index;
+}
+
+.ContextMenuWithoutDropdown {
+  box-shadow: 0 0 6px rgba(49, 57, 75, 0.25);
+  background: $white;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: $dropdown-content-z-index;
+}
+
+.DropdownExplorer {
+  position: relative;
+  width: 180px;
+  align-items: center;
+  justify-content: space-between;
+  height: 34px;
+  display: flex;
+  font-size: 13px;
+  color: $grey-light-1;
+  border: 1px solid $top-bar-separator-color;
+  padding: 0 10px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  svg {
+    width: 5px;
+    height: 8px;
+    align-self: center;
+    transform: rotate(90deg);
+    color: red;
+    fill: blue;
+  }
+}
+
+.ActiveElement {
+  font-weight: bold;
+}
+
+.DropdownItems {
+  border: 1px solid $top-bar-separator-color;
+  border-radius: 4px;
+  width: 200px;
+  background-color: $white;
+  font-weight: normal;
+}
+
+.ActiveItem {
+  background-color: #F7F8FB;
+  font-weight: bold;
+}
+
+
+.DropdownLeft {
+  left: 0;
+}
+
+.DropdownRight {
+  right: 0;
+}
+
+.CommonDropdownItems {
+  .CommonDropdownItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: normal;
+
+    &:hover {
+      cursor: pointer;
+      background: $hover-color;
+    }
+
+    svg {
+      width: 16px;
+      height: auto;
+    }
+  }
+}
+
+.DropdownBlockChild {
+  padding: 12px;
+  cursor: pointer;
+  font-weight: normal;
+  &:hover {
+    background: $brand-grey-5;
+  }
+}
+
+.DropdownBlockWithBorder {
+  border-bottom: 1px solid $top-bar-separator-color;
+}
+
+.DropdownItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  align-items: center;
+
+  user-select: none;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: normal;
+  &:hover {
+    background: $brand-grey-5;
+  }
+}
+
+.DropdownItemActive {
+  .DropdownItemLabel {
+    color: #009BF3;
+  }
+}
+
+.DropdownItemIcon {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 16px;
+  }
+}
+
+.DropdownItemDisabled {
+  .DropdownItemIcon, .DropdownItemLabel {
+    opacity: 0.3;
+  }
+}
+
+.DropdownItemLabelWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.DropdownItemLabel {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: $grey-light-1;
+}
+
+.ActiveDropdownItem {
+  .DropdownItemLabel {
+    color: $brand-blue;
+  }
+
+  .DropdownItemIcon {
+    svg {
+      stroke: $brand-blue;
+    }
+  }
+}
