@@ -1,35 +1,27 @@
-name: "build-test"
-on: # rebuild any PRs and main branch changes
+name: npm audit
+
+on:
   pull_request:
   push:
     branches:
       - master
       - 'releases/*'
+# on:
+#   schedule:
+#     - cron: '0 10 * * *'
 
 jobs:
-  build: # make sure build/ci work properly
+  scan:
+    name: npm audit
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - run: |
-        npm ci
-        npm run all
-    - uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-  test: # make sure the action works on a clean machine without building
-    runs-on: ubuntu-latest
-    steps:
-    - name: Dump GitHub context
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: echo "$GITHUB_CONTEXT"
-    - uses: actions/checkout@v2
-    - uses: ./
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        issue_title: npm audit run by test job
-    - uses: ./
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        working_directory: __tests__/testdata/workdir/
+      - uses: actions/checkout@v2
+      - name: install dependencies
+        run: npm ci
+      - uses: oke-py/npm-audit-action@v1.7.3
+        with:
+          audit_level: moderate
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          issue_assignees: oke-py
+          issue_labels: vulnerability,test
+          
