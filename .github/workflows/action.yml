@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: install dependencies
         run: npm ci
-      - uses: kingbengs/testingnpm@master
+      - uses: /Users/lionking/Downloads/testingnpm@master
         with:
           audit_level: moderate
           github_token: ${{ secrets.GITHUB_TOKEN }}
