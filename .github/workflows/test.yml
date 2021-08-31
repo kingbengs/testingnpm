@@ -19,9 +19,11 @@ jobs:
         run: npm ci
       - uses: oke-py/npm-audit-action@v1.7.3
         with:
-          audit_level: moderate
+          audit_level: high
           production_flag: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
 #          issue_assignees: oke-py
           issue_labels: vulnerability,test
           dedupe_issues: true
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
